@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href='../../css/stylettl.css'/>
+<link rel="icon" type="image/png" href="../../img/favicon_ttl.png"/>
+<title>Tweeting at boxes</title>
+</head>
+
+<body>
+
+<div id="nav">
+	<div id="innerNav">
+		<ul>
+		<li><a data-scroll href="#home">Home</a></li>
+		<li><a data-scroll href="#about">About</a></li>
+		<li><a data-scroll href="#code">Code</a></li>
+		<!--<li><a data-scroll href="#video">Video</a></li>-->
+		</ul>
+	</div>
+</div>
+
+<div id="page1">
+	<a id="home"></a>
+	<center><img src="../../img/TweetToLockLogo.png" alt="logo" width="75%"/></center>
+	<center><h1>A Twitter Operated Lock Box</h1></center>
+</div>
+
+<div id="page2">
+	<a id="about"></a>
+	<h1 id="pageHeader">What is TweetToLock?</h1>
+	<p id="text">
+	Introduction:<br>
+	<br>
+	TweetToLock is a Raspberry Pi based project that allows you to unlock a
+	box (or anything else, depending on what you attach it to) by tweeting a certain
+	keyword.<br> 
+	<br>
+	The Hardware:<br>
+	<br>
+	My setup contains the following:<br>
+	A Rapberry Pi (of course)<br>
+	A micro servo (it has enough force for my project but may not be enough
+	for something like opening a dead-bolt lock on a door)<br>
+	A box (or anything you want attach a servo or other actuator to)<br>
+	<br>
+	The Software:<br>
+	<br>
+	Firstly, to make working with a servo much easier a flashed a version of linux
+	to my Pi known as Occidentals. Occidentals is created by Adafruit and available
+	for free on thier website along with tutorials for running a servo with it.
+	So once I had the proper setup for running my servo I created the actual
+	program in Python (see full code below). This is mostly just basics, the 
+	trickiest part was pulling the actual data from twitter. For this I took a few
+	hints from a similar project called Tweet-a-Pot (you can check it out on
+	Instructables). It's somewhat different since it uses an arduino but it still
+	uses python to interface with Twitter and gave me a good idea of how to do 
+	that.<br>
+	<br>
+	Future Work:<br>
+	<br>
+	This is just a quick list of things I would like to add to make this project
+	more polished.<br>
+	-Checking the current state of the box (open/close) each time it turns on<br>
+	-Make a web interface that allows you to easily set things such as the 
+	Twitter account used and the keywords for opening and closing it.<br>
+	-Make it easily attach to a door lock or other stationary locking system
+	(since it's really not practical to	have a box that needs to be plugged 
+	in/ recharged all the time)
+	</p>
+</div>
+
+<div id="page3">
+	<a id="code"></a>
+	<h1 id="pageHeader">The Code</h1>
+	<div id="outerScroll">
+		<div id="scroll">
+			<p>
+			# TweetBox by Gary Grossi<br>
+			# Created 06/04/2014<br>
+			# Updated 06/09/2014<br>
+			# Version 0.4<br>
+			<br>
+			# library imports<br>
+			import time<br>
+			import twitter<br>
+			<br>
+			# Twitter authentication and setup<br>
+			keys = twitter.Api(consumer_key="Enter consumer key here",<br>
+			consumer_secret="Enter consumer secret here",<br>
+			access_token_key="Enter access token here",<br>
+			access_token_secret="Enter token secret here")<br>
+			print "Starting TweetToLock"<br>
+			status = ""<br>
+			keywordLock = "colloportus"<br>
+			keywordUnlock =  "alohomora"<br>
+			prevState = ""<br>
+			<br>
+			# Tweet reading function<br>
+			def tweetTL():<br>
+				global prevState<br>
+				status = keys.GetUserTimeline("TweetToLock")<br>
+				receivedStatus = [s.text for s in status]<br>
+				splitStatus = receivedStatus[0].split()<br>
+				length = len(splitStatus)<br>
+				for x in range (0,length):<br>
+					if splitStatus[x] == keywordLock and splitStatus[x] != prevState:<br>
+						print "locking"<br>
+						def set(property, value):<br>
+							try:<br>
+								f = open("/sys/class/rpi-pwm/pwm0/" + property, 'w')<br>
+								f.write(value)<br>
+								f.close()<br>
+							except:<br>
+								print("Error writing to: " + property + " value: " + value)		
+						def setServo(angle):<br>
+							set("servo", str(angle))<br>
+						set("delayed", "0")<br>
+						set("mode", "servo")<br>
+						set("servo_max", "180")<br>
+						set("active", "1")<br>
+						delay_period = 0.01<br>
+						for angle in range(0, 160): # Runs servo to close<br>
+							setServo(180 - angle)<br>
+							time.sleep(delay_period)<br>
+							print(angle)<br>
+						prevState = keywordLock<br>
+					elif splitStatus[x] == keywordUnlock and splitStatus[x] != prevState:<br>
+						print "unlocking"<br>
+						def set(property, value):<br>
+							try:<br>
+								f = open("/sys/class/rpi-pwm/pwm0/" + property, 'w')<br>
+								f.write(value)<br>
+								f.close()<br>
+							except:<br>
+								print("Error writing to: " + property + " value: " + value)<br>		
+						def setServo(angle):<br>
+							set("servo", str(angle))<br>			
+						set("delayed", "0")<br>
+						set("mode", "servo")<br>
+						set("servo_max", "180")<br>
+						set("active", "1")<br>
+						delay_period = 0.01<br>
+						for angle in range(0, 160): # Runs servo to open<br>
+							setServo(angle)<br>
+							time.sleep(delay_period)<br>
+							print(angle)<br>
+						prevState = keywordUnlock<br>
+					else:<br>
+						print "neutral"<br>
+			<br>		
+			# Running tweetTL function on loop<br>
+			while True:<br>
+				tweetTL()<br>
+				time.sleep(5)<br>
+			</p>
+		</div>
+	</div>
+</div>
+
+<!--
+<div id="page4">
+	<a id="video"></a>
+	<h1 id="pageHeader">See it in action</h1>
+	<p>My demo video will be up soon</p>
+</div> -->
+
+<script src="../../js/smooth-scroll.js"></script>
+<script>smoothScroll.init();</script>
+<body>
+
+</html>

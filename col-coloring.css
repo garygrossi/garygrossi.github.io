@@ -1,0 +1,75 @@
+.col-coloring-st{
+	background-color:#0099FF;
+	border-radius: 25px;
+}
+
+.col-coloring-gc{
+	background-color:#000000;
+	border-radius: 25px;
+}
+.col-coloring-gc p{
+	color:#CCCCCC;
+}
+.col-coloring-gc h2{
+	color:#CCCCCC;
+}
+
+.col-coloring-ttl{
+	background-color:cyan;
+	border-radius: 25px;
+}
+
+.col-coloring-if{
+	background-color:#FF6666;
+	border-radius: 25px;
+}
+
+.col-coloring-gw{
+	background-color:orange;
+	border-radius: 25px;
+}
+
+.col-coloring-res{
+	background-color:#FFFFFF;
+	border-radius: 25px;
+}
+
+.col-coloring-sc{
+	background-color:#BD1737;
+	border-radius:25px;
+}
+
+.col-coloring-sc p{
+	color:#CCCCCC;
+}
+	
+.col-coloring-sc h2{
+	color:#CCCCCC;
+}
+.col-coloring-bq{
+	background-color:yellow;
+	border-radius:25px;
+}
+
+.col-coloring-dwd{
+	background-color:#696A6D;
+	border-radius:25px;
+}
+
+.col-coloring-dwd p{
+	color:#CCCCCC;
+}
+
+.col-coloring-dwd h2{
+	color:#CCCCCC;
+}
+
+.col-xs-6{
+	min-height:300px;
+    min-width:300px;
+}
+
+.col-lg-4{
+	min-height:350px;
+    min-width:300px;
+}

@@ -1,0 +1,16 @@
+.container{
+}
+
+.shadow-offf {
+    box-shadow: 0 0 30px black;
+    padding:0 15px 0 15px;
+}
+
+.grad {
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-radial-gradient(red, yellow, green); /* Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(red, yellow, green); /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(red, yellow, green); /* For Firefox 3.6 to 15 */
+  background: radial-gradient(blue, #0099FF, white); /* Standard syntax */
+  border-radius: 25px;
+}

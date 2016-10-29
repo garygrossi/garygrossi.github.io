@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<title>A 3D Visualization WebApp</title>
+
+<head>
+<style>
+ul
+{
+	list-style-type:none;
+	margin:0;
+	padding:20px;
+	overflow:hidden;
+}
+li
+{
+	float:left;
+}
+a
+{
+	display:block;
+	width:100px;
+	background-color:#000000;
+	color:white;
+}
+h1
+{
+	color:white;
+}
+p
+{
+	text-align:center;
+	color:white;
+}
+#page1,#page2,#page3
+{
+	width: 100%;
+	height: 1000px;
+	align: left;
+}
+
+#nav
+{
+	position: fixed;
+	z-index:10;
+}
+</style>
+</head>
+
+<body style="background-color:black;">
+
+<div id="nav">
+	<ul>
+	<li><a data-scroll href="#home">Home</a></li>
+	<li><a data-scroll href="#about">About</a></li>
+	<li><a data-scroll href="#team">Team</a></li>
+	<li><a data-scroll href="#simulation">Simulation</a></li>
+	</ul>
+</div>
+
+<div id="page1">
+	<a id="home"></a>
+	<center><img src="../../img/GeocoreFedit.jpg" alt="logo" width="1000" height="550"/></center>
+	<center><h1>3D Geographic Data Visualization</h1></center>
+</div>
+
+<div id="page2">
+	<a id="about"></a>
+	<center>
+	<h1 style="color:white">About</h1>
+	</center>
+	<p> 	GeoCorre is a 3D data correlations visualization tool set. 
+	It allows multi-dimensional data analysis by representing <br>correlation between data sets over a geographic region. 
+	This tools has many uses including understanding socio-economic <br>data relationship, viewing the political interest of an area, 
+	and determining relationships between medical problems, <br>location, and other factors. 
+	It also includes Leap Motion functionality to allow for natural motion based data navigation. <br>
+	This project was created at Philly{Codefest} 2014 by team Atomic Dragons. 
+	</p>
+</div>
+
+<div id="page3">
+	<a id="team"></a>
+	<center>
+	<h1 style="color:white">Team Atomic Dragons</h1>
+	<center>
+	<p>Dhantha Gunarathna<br>Gary Grossi<br>Matt Roll<br>Mike Koerner<br>Dennis Shtatnov<br>
+	</p>
+</div>
+
+<div id="page4">
+	<a id="simulation"></a>
+	<script type="application/javascript" src="../../js/three.js"></script>
+	<script type="application/javascript" src="../../js/leap-0.4.1.js"></script>
+	<script type="application/javascript" src="../../js/jquery-1.11.0.min.js"></script>
+	<script type="application/javascript" src="../../js/drawing.js"></script>
+	<script type="application/javascript" src="../../js/main2.js"></script>
+	<body onload="start()">	</body>
+</div>
+
+<script src="../../js/smooth-scroll.js"></script>
+<script>smoothScroll.init();</script>
+</body>
+</html>

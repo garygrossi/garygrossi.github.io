@@ -1,0 +1,32 @@
+.jumbotron{
+	background-color:#81D681;
+	margin-bottom:0px;
+	min-height:1000px;
+}
+
+.firstJumbotron{
+	background-image: url(img/mainBackground2.jpg);
+	background-size:cover;
+    background-position: right;
+}
+
+.firstJumbotron h1{
+    color:#000000
+}
+
+.firstJumbotron p{
+    color:#000000
+}
+
+.aboutJumbotron{
+    min-height:500px;
+}
+
+.secondJumbotron{
+	background-image:url(img/mainBackground4.jpg);
+	background-size:cover;
+}
+
+.lastJumbotron{
+	min-height:500px;
+}
