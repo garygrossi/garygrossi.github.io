@@ -5,7 +5,7 @@
 }
 
 .firstJumbotron{
-	background-image: url(img/mainBackground2.jpg);
+	background-image: url(../img/mainBackground2.jpg);
 	background-size:cover;
     background-position: right;
 }
@@ -23,7 +23,7 @@
 }
 
 .secondJumbotron{
-	background-image:url(img/mainBackground4.jpg);
+	background-image:url(../img/mainBackground4.jpg);
 	background-size:cover;
 }
 
