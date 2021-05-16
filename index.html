@@ -8,10 +8,10 @@
     
     <!-- Search engine meta tags -->
     <title>Gary Grossi</title>
-    <link rel=”author” href=”https://plus.google.com/+GaryGrossi1/”/>
+    <link rel="author" href="https://plus.google.com/+GaryGrossi1/"/>
     <meta name="title" content="Gary Grossi"/>
     <meta name="description" content="The personal website of Gary Grossi"/>
-    <meta name="keywords" content="technology,programming,Gary Grossi"/>
+    <meta name="keywords" content="technology,product,software,gaming,Gary Grossi"/>
     <meta name="author" content="Gary Grossi"/>
     
     <!-- Facebook meta tags -->
@@ -49,6 +49,7 @@
   </head>
   <body>
 	<!-- Fixed navbar -->
+	
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -58,22 +59,28 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="http://www.garygrossi.com/">garygrossi.com</a>
+          <a class="navbar-brand" href="https://www.garygrossi.com/">garygrossi.com</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a data-scroll href="#top">Home</a></li>
             <li><a data-scroll href="#about">About</a></li>
-			<li><a data-scroll href="#projects">Projects</a></li>
+			<li>
+				<a class="dropdown-toggle" data-toggle="dropdown">Projects <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a data-scroll href="#software">Software</a></li>
+					<li><a data-scroll href="#hardware">Hardware</a></li>
+					<li><a data-scroll href="#games">Games</a></li>
+				</ul>
+			</li>
             <li><a data-scroll href="#contact">Contact</a></li>
           </ul>
-        </div><!--/.nav-collapse -->
+        </div>
       </div>
     </nav>
 	
 	<a id="top"></a>
     <div class="jumbotron firstJumbotron">
-      <!-- Main component for a primary marketing message or call to action -->
       <div class="container">
         <h1>Hello, I'm Gary.</h1>
         <p>This my is personal website and project portfolio.</p>
@@ -82,15 +89,12 @@
 	
 	<a id="about"></a>
 	<div class="jumbotron aboutJumbotron">
-      <!-- Main component for a primary marketing message or call to action -->
       <div class="container">
 		
         <h1>About me</h1>
-        <p>I study computer engineering at Drexel University and practice software development in my free time. 
-		My technical interests are video game design, hardware prototyping, and application development. 
-		I’ve worked on several projects related to those interests and am always looking for new technical skills to pick up.
-		I recently completed an internship at <a href="http://myscholly.com/">Scholly</a> as a software developer. 
-		Outside of studying for classes I am currently an officer of the Drexel Game Developers Group and a lead organizer of <a href="http://dragonhacks.io/">DragonHacks</a>.</p>
+        <p>Currently I'm a product manager at <a href="https://www.vmware.com/">VMware</a>.
+		My product interests include artificial intelligence, consumer software, and gaming.
+		I'm always driven by curiosity to learn new things and am constantly on the lookout for the latest changes in the tech industry.</p>
 	  </div>
 	</div>
 	
@@ -101,102 +105,151 @@
         <div class="col-xs-12">
 		
 		<h1>My Projects</h1>
-          <div class="row">
-            <div class="col-xs-6 col-lg-4 col-coloring-st shadow">
-              <h2>Sky Tower</h2>
-              <p>Sky Tower is a video game I created as my freshman design project. It is a vertical scrolling endless platerformer. </p>
-              <p style="position:absolute; bottom:0;"><a class="btn btn-default" href="https://sites.google.com/site/gamedesign19104/" role="button">View details &raquo;</a></p>
-			</div><!--/.col-xs-6.col-lg-4-->
-            <div class="col-xs-6 col-lg-4 col-coloring-gc shadow">
-              <h2>GeoCore</h2>
-              <p>Geocore is a data visualization software that allows you to plot data over a geographic region using a globe-like interface.</p>
-              <p style="position:absolute; bottom:0;"><a class="btn btn-default" href="projects/geocore/index.html" role="button">View details &raquo;</a></p>
-            </div><!--/.col-xs-6.col-lg-4-->
-            <div class="col-xs-6 col-lg-4 col-coloring-ttl shadow">
-              <h2>Tweet To Lock</h2>
-              <p>TweetToLock is a Twitter operated lockbox that allows you to set keywords that, when tweeted, will lock or unlock the box.</p>
-			  <p style="position:absolute; bottom:0;"><a class="btn btn-default" href="projects/tweettolock/index.html" role="button">View details &raquo;</a></p>
-            </div><!--/.col-xs-6.col-lg-4-->
-            <div class="col-xs-6 col-lg-4 col-coloring-if shadow">
-              <h2>Intellifit (pain90x)</h2>
-              <p>Intellifit, also referred to as pain90x, is a mobile fitness application that interfaces with the Thalmic Myo to create and record exercise dynamically.</p>
-              <p style="position:absolute; bottom:0;"><a class="btn btn-default" href="http://devpost.com/software/pain90x" role="button">View details &raquo;</a></p>
-            </div><!--/.col-xs-6.col-lg-4-->
-			<div class="col-xs-6 col-lg-4 col-coloring-sc shadow">
-              <h2>Scholly for Android</h2>
-              <p>Scholly is a scholarship search application. I did not create Scholly or the Android application but have added several features and contributed significantly to its code.</p>
-              <p style="position:absolute; bottom:0;"><a class="btn btn-default" href="https://play.google.com/store/apps/details?id=com.scholly.scholarshipsearch" target="_blank" role="button">View details &raquo;</a></p>
-            </div> <!--/.col-xs-6.col-lg-4-->
-            <div class="col-xs-6 col-lg-4 col-coloring-gw shadow">
-              <h2>Garfield Wear</h2>
-              <p>Garfield Wear is a proof of concept for an Android Wear daily comic strip viewer. It will push each strip to your watch and allow you to view it frame by frame.</p>
-              <p style="position:absolute; bottom:0;"><a class="btn btn-default" href="https://github.com/Gs44/Garfield_Wear" role="button">In progress</a></p>
-            </div><!--/.col-xs-6.col-lg-4-->
-			<div class="col-xs-6 col-lg-4 col-coloring-bq shadow">
-              <h2>Banana Quest</h2>
-              <p>Banana Quest is a game I developed in GameMaker: Studio over the course of a weekend. It was used to demonstrate the basics of GameMaker in a presentation.</p>
-              <p style="position:absolute; bottom:0;"><a class="btn btn-default" href="http://game.garygrossi.com" role="button">Play</a>
-			  <a class="btn btn-default" href="https://github.com/garygrossi/BananaQuest" role="button">Source code &raquo;</a></p>
-            </div>
-			<div class="col-xs-6 col-lg-4 col-coloring-dwd shadow">
-              <h2>Dancing With Drones</h2>
-              <p>Dancing With Drones is my senior design project. My senior design team and I are designing, constructing, and programming network connected drones that utilize infrared tracking to enable humans and drones to dance together.</p>
-              <p style="position:absolute; bottom:0;"><a class="btn btn-default" href="https://filmadelphia.secure.force.com/ticket/#details_a0S1a00000EezgHEAR" role="button">Tickets</a> <a class="btn btn-default" href="http://www.philly.com/philly/blogs/the-arts/At-Drexel-People-and-drones-will-dance-together.html" role="button">Preview &raquo;</a></p>
-            </div>
-			<div class="col-xs-6 col-lg-4 col-coloring-res shadow">
-              <h2>More</h2>
-              <p>For a comprehensive list of skills, experience, and other projects I've worked on check out my full resume.</p>
-			  <p style="position:absolute; bottom:0;"><a class="btn btn-default" href="img/GaryGrossi_Resume.pdf" role="button">Download</a></p>
-            </div><!--/.col-xs-6.col-lg-4-->
-          </div><!--/row-->
-        </div><!--/.col-xs-12.col-sm-9-->
-      </div><!--/row-->
-	  </div><!--/.container-->
+		
+			<a id="software"></a>
+			<br><h2>Software</h2>
+			<div class="card-group">
+				<a style="text-decoration: none; color:inherit;" href="https://devpost.com/software/pain90x">
+				<div class="card hvr-glow" style="background-color: pink;">
+					<div class="card-block">
+						<h2 class="card-title">Intellifit (pain90x)</h4>
+						<p class="card-text">Intellifit, also referred to as pain90x, is a mobile fitness application that interfaces with the Thalmic Myo to create and record exercise dynamically.</p>
+					</div>
+				</div>
+				</a>
+				<a style="text-decoration: none; color:inherit;" href="https://github.com/garygrossi/Garfield_Wear">
+				<div class="card hvr-glow" style="background-color: orange;">
+					<div class="card-block">
+						<h2 class="card-title" style="color:black;">Garfield Wear</h4>
+						<p class="card-text" style="color:black">Garfield Wear is a proof of concept for an Android Wear daily comic strip viewer. It will push each strip to your watch and allow you to view it frame by frame.</p>
+					</div>
+				</div>
+				</a>
+				<a style="text-decoration: none; color:inherit;" href="https://play.google.com/store/apps/details?id=com.scholly.scholarshipsearch">
+				<div class="card hvr-glow" style="background-color: #BD1737;">
+					<div class="card-block">
+						<h2 class="card-title" style="color:black;">Scholly for Android</h4>
+						<p class="card-text" style="color:black">Scholly is a scholarship search application. I did not create Scholly or the Android application but have added several features and contributed significantly to its code.</p>
+					</div>
+				</div>
+				</a>
+				<a style="text-decoration: none; color:inherit;" href="https://github.com/garygrossi/XDoG-Python">
+				<div class="card hvr-glow" style="background-color: white;">
+					<div class="card-block">
+						<h2 class="card-title" style="color:black;">XDoG Python</h4>
+						<p class="card-text" style="color:black">A Python implementation of eXtended Difference of Gaussians.</p>
+					</div>
+				</div>
+				</a>
+			</div>
+			
+			<a id="hardware"></a>
+			<br><h2>Hardware</h2>
+			<div class="card-group">
+				<a style="text-decoration: none; color:inherit;" href="https://garygrossi.com/projects/tweettolock/index.html">
+				<div class="card hvr-glow" style="background-color: cyan;">
+					<div class="card-block">
+						<h2 class="card-title">Tweet To Lock</h4>
+						<p class="card-text">TweetToLock is a Twitter operated lockbox that allows you to set keywords that, when tweeted, will lock or unlock the box.</p>
+					</div>
+				</div>
+				</a>
+				<a style="text-decoration: none; color:inherit;" href="http://www.philly.com/philly/entertainment/Parsons-Dance-at-the-Prince-.html">
+				<div class="card hvr-glow" style="background-color: gray;">
+					<div class="card-block">
+						<h2 class="card-title" style="color:black;">Dancing With Drones</h4>
+						<p class="card-text" style="color:black">Dancing With Drones was my senior design project. My senior design team and I worked with external stakeholders to design and devlop drones that enable humans and machines to dance together.</p>
+					</div>
+				</div>
+				</a>
+			</div>
+			
+			<a id="games"></a>
+			<br><h2>Games</h2>
+			<div class="card-group">
+				<a style="text-decoration: none; color:inherit;" href="https://sites.google.com/site/gamedesign19104/"><div class="card hvr-glow" style="background-color: lightblue;">
+					<div class="card-block">
+						<h2 class="card-title">Sky Tower</h4>
+						<p class="card-text">Sky Tower is a video game I created as my freshman design project. It is a vertical scrolling endless platerformer.</p>
+					</div>
+				</div> </a>
+				<a style="text-decoration: none; color:inherit;" href="https://github.com/garygrossi/BananaQuest">
+				<div class="card hvr-glow" style="background-color: yellow;">
+					<div class="card-block">
+						<h2 class="card-title" style="color:black;">Banana Quest</h4>
+						<p class="card-text" style="color:black">Banana Quest is a game I developed in GameMaker: Studio over the course of a weekend. It was used to demonstrate the basics of GameMaker in a presentation.</p>
+					</div>
+				</div>
+				</a>
+				<a style="text-decoration: none; color:inherit;" href="https://github.com/garygrossi/SleepingLion">
+				<div class="card hvr-glow" style="background-color: brown;">
+					<div class="card-block">
+						<h2 class="card-title" style="color:black;">Sleeping Lion</h4>
+						<p class="card-text" style="color:black">An infinite runner video game created in Unity.</p>
+					</div>
+				</div>
+				</a>
+                <a style="text-decoration: none; color:inherit;" href="http://game.garygrossi.com/ae/AlienatedEscape.zip">
+                    <div class="card hvr-glow" style="background-color: #67bf70;">
+                        <div class="card-block">
+                            <h2 class="card-title" style="color:black;">Alienated Escape</h4>
+                                <p class="card-text" style="color:black">Alientated Escape is 3D stealth game where you play as an alien creature escaping from a secret lab patrolled by robot guards. (WebGL Download)</p>
+                                </div>
+                    </div>
+                </a>
+			</div>
+			
+			<br><h2>More</h2>
+			<div class="card-group">
+				<a style="text-decoration: none; color:inherit;" href="https://garygrossi.com/img/GaryGrossi_Resume.pdf">
+				<div class="card hvr-glow" style="background-color: white;">
+						<div class="card-block">
+							<h2 class="card-title" style="color:black;">Resume</h4>
+							<p class="card-text" style="color:black">For a more detailed look at my experience check out my full resume.</p>
+						</div>
+				</div>
+				</a>
+			</div>
+        </div>
+      </div>
+	  </div>
 	</div>
 	
 	<a id="contact"></a>
 	<div class="jumbotron lastJumbotron">
-      <!-- Main component for a primary marketing message or call to action -->
 		<div class="container">
 			<h1>Contact</h1>
 			<table class="table">
 			<tr>
-			<td>email: </td>
-			<td><a href="mailto:contact@garygrossi.com">contact@garygrossi.com</p></td>
+                <td>Email: </td>
+                <td><a href="mailto:contact@garygrossi.com">contact@garygrossi.com</p></td>
 			</tr>
+            <tr>
+                <td>Twitter:</td>
+                <td><a href="https://twitter.com/GaryGrossi">@GaryGrossi</p></td>
+            </tr>
 			<tr>
-			<td>Twitter:</td>
-			<td><a href="https://twitter.com/GaryGrossi">@GaryGrossi</p></td>
-			</tr>
-			<tr>
-			<td>Google+: </td>
-			<td><a href="https://plus.google.com/+GaryGrossi1">+GaryGrossi1</p></td>
-			</tr>
-			<tr>
-			<td>GitHub:</td>
-			<td><a href="https://github.com/garygrossi">garygrossi</p></td>
-			</tr>
-			<tr>
-			<td>LinkedIn:</td>
-			<td><a href="https://www.linkedin.com/pub/gary-grossi/86/7b3/488">Gary Grossi</p></td>
+                <td>LinkedIn:</td>
+                <td><a href="https://www.linkedin.com/in/garysgrossi">Gary Grossi</p></td>
 			</tr>
 			</table>
 			
 			<hr>
 			<footer>
-				<p>&copy; 2017 Gary Grossi</p>
+				<p>&copy; 2021 Gary Grossi</p>
 			</footer>
 		</div>
-	</div>
+	</div> 
+
 	  
 	<!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <!-- <script type="text/javascript">window.location.replace("https://www.linkedin.com/in/garysgrossi/");</script> -->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
 	<script src="js/smooth-scroll.js"></script>
 	<script>smoothScroll.init();</script>
 	<script>

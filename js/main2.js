@@ -49,7 +49,7 @@ window.onmouseup = function(e){
 
 
 function drawBoundaries(){
-	$.get("./states.xml", null, function (data, textStatus) {
+	$.get("xml/states.xml", null, function (data, textStatus) {
 	    $(data).find("state").each( function(){
 		var verts = [];
 
@@ -110,7 +110,7 @@ function latlongPlot(lat, long){
 
 function jsonParse(){
 	//return;
-	$.getJSON( "./jsonOut4.json", function( data ) {
+	$.getJSON( "scripts/jsonOut4.json", function( data ) {
 		var res = data["correlation_results"];
 
 		var verts = [];
@@ -229,7 +229,7 @@ function start(){
 	
 	drawBoundaries();
 
-	jsonParse();
+	/////jsonParse();
 
 
 	camera.position.z = 5;
